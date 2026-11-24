@@ -166,11 +166,13 @@ footer a { color: var(--accent); }
     <h1>カオスイベント検索<small>全10カオスの発生イベント・選択肢</small></h1>
     <div class="search">
       <input id="q" type="search" placeholder="例：ヒラメキ　排除　伝説装備（スペース区切りでAND検索）" autocomplete="off" aria-label="検索ワード">
-      <select id="chaos" aria-label="カオスで絞り込み"><option value="">すべてのカオス</option></select>
-      <select id="area" aria-label="発生場所で絞り込み"><option value="">すべての発生場所</option></select>
     </div>
     <details>
     <summary>詳細検索を開く・閉じる</summary>
+    <div class="search">
+      <select id="chaos" aria-label="カオスで絞り込み"><option value="">すべてのカオス</option></select>
+      <select id="area" aria-label="発生場所で絞り込み"><option value="">すべての発生場所</option></select>
+    </div>
     <div class="view-content">
       <div class="opts">
         <label><input id="rareOnly" type="checkbox"> 希少のみ</label>

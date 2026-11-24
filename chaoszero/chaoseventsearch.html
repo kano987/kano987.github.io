@@ -52,6 +52,17 @@ header.bar {
   background: var(--surface); border-bottom: 1px solid var(--line);
 }
 header.bar .wrap { padding-block: 14px 12px; display: grid; gap: 10px; }
+
+details {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+summary {
+  cursor: pointer; /* マウスを乗せたときに指マークにする */
+  font-weight: bold;
+}
+
 h1 {
   font-family: var(--font-display); font-weight: 400; font-size: 22px; margin: 0;
   letter-spacing: 0.02em; text-wrap: balance;
@@ -158,19 +169,24 @@ footer a { color: var(--accent); }
       <select id="chaos" aria-label="カオスで絞り込み"><option value="">すべてのカオス</option></select>
       <select id="area" aria-label="発生場所で絞り込み"><option value="">すべての発生場所</option></select>
     </div>
-    <div class="opts">
-      <label><input id="rareOnly" type="checkbox"> 希少のみ</label>
-      <label><input id="titleOnly" type="checkbox"> イベント名だけで検索</label>
-      <div class="chips" aria-label="よく使う検索ワード">
-        <button class="chip" type="button">神ヒラメキ</button>
-        <button class="chip" type="button">排除</button>
-        <button class="chip" type="button">最大HP</button>
-        <button class="chip" type="button">伝説装備</button>
-        <button class="chip" type="button">呪い</button>
-        <button class="chip" type="button">コピー</button>
-        <button class="chip" type="button">ストレス 減少</button>
+    <details>
+    <summary>詳細検索を開く・閉じる</summary>
+    <div class="view-content">
+      <div class="opts">
+        <label><input id="rareOnly" type="checkbox"> 希少のみ</label>
+        <label><input id="titleOnly" type="checkbox"> イベント名だけで検索</label>
+        <div class="chips" aria-label="よく使う検索ワード">
+          <button class="chip" type="button">神ヒラメキ</button>
+          <button class="chip" type="button">排除</button>
+          <button class="chip" type="button">最大HP</button>
+          <button class="chip" type="button">伝説装備</button>
+          <button class="chip" type="button">呪い</button>
+          <button class="chip" type="button">コピー</button>
+          <button class="chip" type="button">ストレス 減少</button>
+        </div>
       </div>
     </div>
+  </details>
     <div class="count" id="count" aria-live="polite"></div>
   </div>
 </header>
